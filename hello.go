@@ -1,19 +1,21 @@
 package main
 
-import "fmt"
+//run go mod tidy
+//When you ran go mod tidy, it located and downloaded the rsc.io/quote/v4 module that contains the package you imported.
+//import the fmt package
+//import the quote package
+//create a main function
+//call the fmt.Println function and pass the quote.Go() function as an argument
+//run the program
+//go run hello.go
+//output
+//Don't communicate by sharing memory, share memory by communicating.
+import (
+	"fmt"
+
+	"rsc.io/quote/v4"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	fmt.Println(quote.Go())
 }
-
-//before running the code, you need to install Go on your machine. You can download it from the official website of Go.
-//run go mod init hello
-//This will create a new module named hello in the current directory. A module is a collection of Go packages stored in a file tree with a go.mod file at its root.
-//The go.mod file defines the module's path, which is the import path used by other packages to import the module. In this case, the module path is hello.
-//Next, you need to create a new Go file named hello.go in the same directory and add the following code to it:
-//The code defines a main function that prints "Hello, World!" to the standard output using the fmt.Println function.
-//The fmt package is part of the Go standard library and provides functions for formatting and printing text.
-//To run the code, you need to open the terminal and navigate to the directory where the code is saved. Then, you can run the code using the following command:
-//go run hello.go
-//This will compile and run the code, and you should see the output "Hello, World!" printed on the terminal.
-//keep the mod file with project and add the go file in the same directory
